@@ -1,0 +1,16 @@
+composer require symfony/serializer
+
+php app/console doctrine:generate:entities
+
+php app/console debug:router
+
+$ php app/console doctrine:generate:entities AppBundle
+
+php app/console doctrine:schema:update —force
+
+
+php app/console cache:clear --env=dev
+php app/console cache:clear --env=prod
+
+css and images:
+php app/console assets:install web --symlink
